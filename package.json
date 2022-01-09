@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jsdom": "^19.0.0",
+    "miragejs": "^0.1.43"
   }
 }
