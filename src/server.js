@@ -9,12 +9,12 @@ createServer({
                 {
                     "id": "1",
                     "title": "Create React App",
-                    "done": true
+                    "done": false
                 },
                 {
                     "id": "2",
                     "title": "Display ToDo list",
-                    "done": true
+                    "done": false
                 },
                 {
                     "id": "3",
