@@ -22,4 +22,5 @@ describe('Todo List Component', () => {
         const allCheckboxes = await screen.findAllByRole("checkbox")
         expect(allCheckboxes[2]).toEqual(checkbox)
     })
+
 })

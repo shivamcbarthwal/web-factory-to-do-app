@@ -3,6 +3,8 @@ import { getToDos } from '../services/todos'
 
 export default function ToDoList() {
     const [toDoList, setToDoList] = useState([])
+    
+    const [showToDoItem, setShowToDoItem] = useState({visble: false})
 
     const changeStatusHandler = (id) => {
         const list = [...toDoList]
@@ -10,6 +12,11 @@ export default function ToDoList() {
         const itemToChange = list[indexToChange]
         list[indexToChange] = { ...itemToChange, done: !itemToChange.done }
         setToDoList(list)
+    }
+
+    const showToDoItemDetailHandler = (id) => {
+        setShowToDoItem({visble: true})
+        window.location.href = `http://localhost:3000/todos/${id}`
     }
 
     useEffect(async () => {
@@ -34,9 +41,10 @@ export default function ToDoList() {
                             checked={item.done}
                             onChange={() => changeStatusHandler(item.id)}
                         />
-                        <label for={item.id}>
+                        <label for={item.id} >
                             { item.done ? <strike>{item.title}</strike> : item.title }
                         </label>
+                        <button aria-label='label' role="button" onClick={() => showToDoItemDetailHandler(item.id)}>Todo Details</button>
                         <br />
                     </>
                 )
