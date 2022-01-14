@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getToDos } from '../services/todos'
+import AddToDo from './AddToDo'
 
 export default function ToDoList() {
     const [toDoList, setToDoList] = useState([])
@@ -31,7 +32,11 @@ export default function ToDoList() {
 
     return (
         <div>
+            <br />
+            <AddToDo />
+            <h1>Your current To DOS</h1>
             {
+                // display the done items at the bottom of the list
                 toDoList && toDoList.sort(({done}) => done ? 1 : -1).map(item =>
                     <>
                         <input 
@@ -44,7 +49,7 @@ export default function ToDoList() {
                         <label for={item.id} >
                             { item.done ? <strike>{item.title}</strike> : item.title }
                         </label>
-                        <button aria-label='label' role="button" onClick={() => showToDoItemDetailHandler(item.id)}>Todo Details</button>
+                        <button aria-label={item.id} role="button" onClick={() => showToDoItemDetailHandler(item.id)}>Todo Details</button>
                         <br />
                     </>
                 )

@@ -15,7 +15,14 @@ createServer({
         let id = request.params.id
       
         return schema.todos.find(id)
-      })
+    })
+
+    this.post("/todos", (schema, request) => {
+        let attrs = JSON.parse(request.requestBody)
+        return schema.todos.create(attrs)
+    })
+
+    
   },
 
   seeds(server){
