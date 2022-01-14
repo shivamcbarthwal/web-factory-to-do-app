@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/web-factory-to-do-app/static/css/main.073c9b0a.css",
+    "main.js": "/web-factory-to-do-app/static/js/main.ae9afba0.js",
+    "static/js/787.a907325a.chunk.js": "/web-factory-to-do-app/static/js/787.a907325a.chunk.js",
+    "index.html": "/web-factory-to-do-app/index.html",
+    "main.073c9b0a.css.map": "/web-factory-to-do-app/static/css/main.073c9b0a.css.map",
+    "main.ae9afba0.js.map": "/web-factory-to-do-app/static/js/main.ae9afba0.js.map",
+    "787.a907325a.chunk.js.map": "/web-factory-to-do-app/static/js/787.a907325a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ae9afba0.js"
+  ]
+}
